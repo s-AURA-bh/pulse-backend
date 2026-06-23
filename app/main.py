@@ -8,9 +8,7 @@ from app.api.dashboard import router as dashboard_router
 from app.api.goals import router as goals_router
 from app.api.notes import router as notes_router
 
-app = FastAPI(
-    title="Pulse API"
-)
+app = FastAPI(title="Pulse API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -33,6 +31,4 @@ app.include_router(notes_router)
 
 @app.get("/health")
 async def health():
-    return {
-        "status": "ok"
-    }
+    return {"status": "ok"}
