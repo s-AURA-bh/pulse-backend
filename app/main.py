@@ -15,7 +15,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:3001",
-        "https://pulse-frontend-seven-wine.vercel.app",
+        "https://pulse-frontend-967coputz-saurabh4934.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
