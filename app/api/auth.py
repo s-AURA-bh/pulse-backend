@@ -31,6 +31,7 @@ async def register(
         )
 
     new_user = User(
+        name=user.name,
         email=user.email,
         password_hash=hash_password(user.password),
     )
@@ -41,7 +42,8 @@ async def register(
     )
 
     return {
-        "id": created_user.id,
+        "id": created_user.id, 
+        "name": created_user.name,
         "email": created_user.email,
     }
 
