@@ -61,6 +61,10 @@ async def login(
         payload.email,
         payload.password,
     )
+    user = await UserRepository.get_by_email(
+    db,
+    payload.email,
+)
 
     if not token:
         raise HTTPException(
@@ -71,4 +75,5 @@ async def login(
     return {
         "access_token": token,
         "token_type": "bearer",
+        "name": user.name,
     }
