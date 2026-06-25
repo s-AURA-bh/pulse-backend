@@ -14,5 +14,7 @@ async def me(
 ):
     return {
         "id": current_user.id,
+        "name": current_user.name,
         "email": current_user.email,
+        "created_at": current_user.created_at,
     }
